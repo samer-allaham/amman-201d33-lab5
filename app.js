@@ -50,9 +50,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a, b, c){ 
+  //eslint-disable-line
+  let sum1=sum(a,b);
+  let finalsum= sum(sum1[0],c)[0];
+  let Third =`${a} and ${b} and ${c} sum to ${finalsum}.`;
 
-}
+   let mul1=multiply(a, b);
+  let finalMul= multiply(mul1[0],c)[0];
+  let Fourth =`The product of ${a} and ${b} and ${c} is ${finalMul}.`;
+
+ return [finalsum,finalMul,Third,Fourth]
+}; 
+
+// Here is the test for sumAndMultiply(); uncomment it to run it
+console.log (sumAndMultiply(4,7,5));
+testSumAndMultiply(4,7,5); 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
