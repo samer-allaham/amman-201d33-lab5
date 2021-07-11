@@ -52,6 +52,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+  let x=sum(a,b)[0];
+let xResult=sum(x,c)[0];
+let y=multiply(a,b)[0];
+let yResult=multiply(y,c)[0];
+
+return [xResult,yResult, `${a} and ${b} and ${c} sum to ${xResult}.`, `The product of ${a} and ${b} and ${c} is ${yResult}.`]
+
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
