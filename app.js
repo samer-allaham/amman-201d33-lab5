@@ -52,6 +52,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+  let x=sum(a,b)[0];
+  let xResult=sum(x,c)[0];
+  let y=multiply(a,b)[0];
+  let yResult=multiply(y,c)[0];
+  
+  return [xResult,yResult, `${a} and ${b} and ${c} sum to ${xResult}.`, `The product of ${a} and ${b} and ${c} is ${yResult}.`]
+  
+  
+
+
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -74,7 +85,17 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
+
+  let arr=0;
+
+  for(let i=0; i< testArray.length; i++){
+
+arr = sum(arr,sumArr[i])[0];
+
+  }
+  return[arr,`${sumArr} was passed in as an array of numbers, and ${arr} is their sum.`];
 }
+
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -94,6 +115,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+
+  function multiplyArray(multArr) { //eslint-disable-line
+
+    let z = 1;
+  
+    for (let i = 0; i < testArray.length; i++) {
+  
+      z = sum(z, sumArr[i])[0];
+    }
+    return [z, `${sumArr} was passed in as an array of numbers, and ${z} is their sum.`];
+  }
 
 }
 
